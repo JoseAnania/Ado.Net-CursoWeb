@@ -1,0 +1,33 @@
+﻿@using WebCursoMVC.Models
+@{
+    ViewBag.Title = "Listar";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Lista</title>
+    <meta charset="utf-8" />
+</head>
+<body>
+
+    <h1>Lista de Cursos</h1>
+
+    <table border="1">
+
+        <tr><th>ID</th><th>Nombre</th><th>Aula</th></tr>
+
+        @foreach (Curso C in Model)
+        {
+            <tr><td>@C.IdCurso</td><td>@C.Nombre</td><td>@C.Aula</td></tr>
+        }
+
+
+    </table>
+    <br/>
+    @Html.ActionLink("Volver", "Index");
+
+</body>
+</html>
+
